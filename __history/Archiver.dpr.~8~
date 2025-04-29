@@ -1,0 +1,20 @@
+program Archiver;
+
+uses
+  Vcl.Forms,
+  MainUnit in 'MainUnit.pas' {MainForm},
+  ArchiveUnit in 'ArchiveUnit.pas' {ArchiveForm},
+  ProcessUnit in 'ProcessUnit.pas',
+  ProgressUnit in 'ProgressUnit.pas' {ProgressForm},
+  Huffman2 in 'Huffman2.pas',
+  Lz772 in 'Lz772.pas',
+  LZW2 in 'LZW2.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TMainForm, MainForm);
+  Application.Run;
+end.

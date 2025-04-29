@@ -1,0 +1,172 @@
+﻿unit LZ77;
+
+interface
+
+uses
+  SysUtils;
+
+function CompressData(const InData: TBytes; FullFlName: String): TBytes;
+function DeCompressData(const InData: TBytes): TBytes;
+
+implementation
+
+const
+  // Размер окна для поиска предыдущих последовательностей
+  WINDOW_SIZE = 4096;
+  // Максимальная длина совпадения
+  LOOKAHEAD_SIZE = 50;
+
+type
+  // Объявляем тип динамического массива байт
+
+  // Запись, описывающая токен сжатия:
+  // Offset – смещение (сколько символов назад начинать копирование),
+  // Length – длина совпадения,
+  // NextSymbol – следующий символ (литерал), который не вошёл в совпадение.
+  TToken = record
+    Offset: Word;
+    Length: Byte;
+    NextSymbol: Byte;
+  end;
+
+{ Процедура CompressData выполняет сжатие входного массива InData по алгоритму LZ77.
+  Она проходит по входным данным, для каждой позиции ищет в поисковом буфере (ограниченном WINDOW_SIZE)
+  максимально длинное совпадение с буфером предварительного просмотра (ограниченным LOOKAHEAD_SIZE). Если совпадение найдено,
+  формируется токен (offset, length, next symbol). Если совпадение отсутствует или его продолжение выходит за границы,
+  то записывается литерал (0, 0, текущий символ). После формирования последовательности токенов она «упаковывается»
+  в массив OutData, где каждый токен занимает 4 байта (2 для offset, 1 для length, 1 для литерала). }
+function CompressData(const InData: TBytes; FullFlName: String): TBytes;
+var
+  pos, InLen, j, outPos, p: Integer;
+  bestMatchLength, bestMatchDistance, currentMatch, Lfn: Integer;
+  token: TToken;
+  OutTokens: array of TToken;
+  sad: TBytes;
+begin
+  InLen := Length(InData);
+  pos := 0;
+  SetLength(OutTokens, 0);
+
+  // Проходим по всему входному массиву
+  while pos < InLen do
+  begin
+    bestMatchLength := 0;
+    bestMatchDistance := 0;
+
+    // Поиск совпадений в поисковом буфере:
+    // Поиск ведётся от позиции max(0, pos - WINDOW_SIZE) до pos-1.
+    if pos - WINDOW_SIZE > 0 then
+      p := pos - WINDOW_SIZE
+    else p := 0;
+    for j := p to pos - 1 do
+    begin
+      currentMatch := 0;
+      // Ограничиваем совпадение: не больше LOOKAHEAD_SIZE и не выходим за конец буфера поиска
+      while (pos + currentMatch < InLen) and (currentMatch < LOOKAHEAD_SIZE) and ((j + currentMatch) < pos) and (InData[j + currentMatch] = InData[pos + currentMatch]) do
+      begin
+        Inc(currentMatch);
+      end;
+
+      if currentMatch > bestMatchLength then
+      begin
+        bestMatchLength := currentMatch;
+        bestMatchDistance := pos - j;
+      end;
+    end;
+
+    // Если совпадение отсутствует или совпадение до конца входных данных,
+    // записываем токен как литерал: (0, 0, InData[pos])
+    if (bestMatchLength = 0) or (pos + bestMatchLength >= InLen) then
+    begin
+      token.Offset := 0;
+      token.Length := 0;
+      token.NextSymbol := InData[pos];
+      Inc(pos);  // сдвигаемся на один символ
+    end
+    else
+    begin
+      token.Offset := bestMatchDistance;
+      token.Length := bestMatchLength;
+      token.NextSymbol := InData[pos + bestMatchLength];  // следующий символ после совпадения
+      pos := pos + bestMatchLength + 1;
+    end;
+
+    // Сохраняем полученный токен в динамическом массиве OutTokens
+    SetLength(OutTokens, Length(OutTokens) + 1);
+    OutTokens[High(OutTokens)] := token;
+  end;
+  sad := TEncoding.UTF8.GetBytes(FullFlName);
+  Lfn := Length(sad);
+  SetLength(Result, Lfn + 2);
+  //тип архивации
+  Result[0] := 1;
+  //длина имени, имя
+  Result[1] := Lfn;
+  for j := 1 to Lfn do
+    Result[j+1] := sad[j-1];
+
+  // Упаковка токенов в выходной массив.
+  // Каждый токен упаковывается как 2 байта для смещения (little-endian), 1 байт для длины и 1 байт для литерала.
+  SetLength(Result, Length(Result) + Length(OutTokens) * 4);
+  outPos := Lfn + 2;
+  for j := 0 to High(OutTokens) do
+  begin
+    Result[outPos] := Byte(OutTokens[j].Offset and $FF);
+    Result[outPos+1] := Byte((OutTokens[j].Offset shr 8) and $FF);
+    Result[outPos+2] := OutTokens[j].Length;
+    Result[outPos+3] := OutTokens[j].NextSymbol;
+    Inc(outPos, 4);
+  end;
+end;
+{ Функция DecompressData выполняет обратное преобразование: из входного массива InData (где данные
+  представлены в виде последовательности токенов по 4 байта) восстанавливается исходный поток,
+  который возвращается в виде динамического массива байт. Если offset равен 0, производится просто
+  добавление литерала. В противном случае сначала копируется последовательность из уже распакованных данных,
+  а затем добавляется литерал. }
+function DecompressData(const InData: TBytes): TBytes;
+var
+  pos, InLen, i, outPos: Integer;
+  token: TToken;
+  offsetVal: Word;
+  matchLen: Integer;
+  OutData: TBytes;
+begin
+  InLen := Length(InData);
+  pos := InData[1] + 2;
+  SetLength(OutData, 0);
+
+  while pos <= InLen - 4 do
+  begin
+    // Извлекаем токен (считываем 2 байта для offset, 1 байт для length и 1 байт для литерала)
+    token.Offset := InData[pos] or (InData[pos+1] shl 8);
+    token.Length := InData[pos+2];
+    token.NextSymbol := InData[pos+3];
+    pos := pos + 4;
+
+    if token.Offset = 0 then
+    begin
+      // Токен с литералом – просто добавляем символ в выходной массив
+      SetLength(OutData, Length(OutData) + 1);
+      OutData[High(OutData)] := token.NextSymbol;
+    end
+    else
+    begin
+      // Для токена с совпадением копируем matchLen байт из уже полученных данных,
+      // начиная с позиции (длинаOutData - offset)
+      offsetVal := token.Offset;
+      matchLen := token.Length;
+      outPos := Length(OutData);
+      SetLength(OutData, outPos + matchLen);
+      for i := 0 to matchLen - 1 do
+      begin
+        OutData[outPos + i] := OutData[(outPos - offsetVal) + i];
+      end;
+      // После копирования добавляем литерал
+      SetLength(OutData, Length(OutData) + 1);
+      OutData[High(OutData)] := token.NextSymbol;
+    end;
+  end;
+  Result := OutData;
+end;
+
+end.

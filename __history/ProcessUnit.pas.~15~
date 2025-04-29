@@ -1,0 +1,73 @@
+﻿unit ProcessUnit;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Imaging.GIFImg, Vcl.ExtCtrls, Huffman2, Lz772, LZW2;
+
+procedure Archive(InputFileName: string; OutputFileName: string; Algorithm: integer);
+procedure Unarchive(InputFileName: string; OutputDirectory: string);
+
+implementation
+
+procedure Archive(InputFileName: string; OutputFileName: string; Algorithm: integer);
+var FlName: string;
+    InputData, OutputData: TBytes;
+begin
+  InputData := ReadFileBytes(InputFileName);
+  FlName := ExtractFileName(InputFileName);
+  case Algorithm of
+    0: OutputData := Huffman2.CompressData(InputData, FlName);
+    1: OutputData := Lz772.CompressData(InputData, FlName);
+    2: OutputData := LZW2.CompressData(InputData, FlName);
+  end;
+  SaveBytesToFile(OutputData, OutputFileName);
+  var message := 'FileName: ' + InputFileName + #13#10
+    + 'ArchiveFileName: ' + OutputFileName + #13#10
+    + 'Algorithm: ' + Algorithm.ToString();
+  ShowMessage(message);
+end;
+
+procedure Unarchive(InputFileName: string; OutputDirectory: string);
+begin
+  // Here should be your code for unarchiving and saving the unarchive file.
+  var message := 'ArchiveFileName: ' + InputFileName + #13#10
+    + 'OutputDirectory: ' + OutputDirectory;
+  ShowMessage(message);
+end;
+
+//Чтение файла в массив байтов
+function ReadFileBytes(const FileName: string): TBytes;
+var
+  F: File;
+  Size: Integer;
+begin
+  AssignFile(F, FileName);
+  Reset(F, 1); // Открыть файл для чтения (1 = размер блока 1 байт)
+  try
+    Size := FileSize(F);
+    SetLength(Result, Size);
+    if Size > 0 then
+      BlockRead(F, Result[0], Size); // Чтение всего файла
+  finally
+    CloseFile(F);
+  end;
+end;
+
+// Запись TBytes в файл
+procedure SaveBytesToFile(const Data: TBytes; const FileName: string);
+var
+  F: File;
+begin
+  AssignFile(F, FileName);
+  Rewrite(F, 1); // Создать файл для записи
+  try
+    if Length(Data) > 0 then
+      BlockWrite(F, Data[0], Length(Data)); // Запись всех данных
+  finally
+    CloseFile(F);
+  end;
+end;
+
+end.

@@ -1,0 +1,31 @@
+unit ProcessUnit;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Imaging.GIFImg, Vcl.ExtCtrls;
+
+procedure Archive(InputFileName: string; OutputFileName: string; Algorithm: integer);
+procedure Unarchive(InputFileName: string; OutputDirectory: string);
+
+implementation
+
+procedure Archive(InputFileName: string; OutputFileName: string; Algorithm: integer);
+begin
+  // Here should be your code for archiving and saving the archive file
+  var message := 'FileName: ' + InputFileName + #13#10
+    + 'ArchiveFileName: ' + OutputFileName + #13#10
+    + 'Algorithm: ' + Algorithm.ToString();
+  ShowMessage(message);
+end;
+
+procedure Unarchive(InputFileName: string; OutputDirectory: string);
+begin
+  // Here should be your code for unarchiving and saving the unarchive file.
+  var message := 'ArchiveFileName: ' + InputFileName + #13#10
+    + 'OutputDirectory: ' + OutputDirectory;
+  ShowMessage(message);
+end;
+
+end.

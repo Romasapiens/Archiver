@@ -1,0 +1,55 @@
+unit ProgressUnit;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Imaging.GIFImg, Vcl.ExtCtrls, ProcessUnit;
+
+type
+  TProgressForm = class(TForm)
+    ProgressImage: TImage;
+    DeferredExecution: TTimer;
+    procedure FormShow(Sender: TObject);
+    procedure DeferredExecutionTimer(Sender: TObject);
+  private
+    TProcessType: integer;
+    TInputFileName: string;
+    TOutputFileName: string;
+    TOutputDirectory: string;
+    TAlgorithm: integer;
+    { Private declarations }
+  public
+    property ProcessType: integer read TProcessType write TProcessType;
+    property InputFileName: string read TInputFileName write TInputFileName;
+    property OutputFileName: string read TOutputFileName write TOutputFileName;
+    property OutputDirectory: string read TOutputDirectory write TOutputDirectory;
+    property Algorithm: integer read TAlgorithm write TAlgorithm;
+    { Public declarations }
+  end;
+
+var
+  ProgressForm: TProgressForm;
+
+implementation
+
+{$R *.dfm}
+
+procedure TProgressForm.FormShow(Sender: TObject);
+begin
+  (ProgressImage.Picture.Graphic as TGIFImage).Animate := True;
+  DeferredExecution.Interval := 500;
+  DeferredExecution.Enabled := true;
+end;
+
+procedure TProgressForm.DeferredExecutionTimer(Sender: TObject);
+begin
+  DeferredExecution.Enabled := False;
+  try
+    if ProcessType = 0 then Archive(InputFileName, OutputFileName, Algorithm)
+    else Unarchive(InputFileName, OutputDirectory);
+  finally
+    self.Close();
+  end;
+end;
+end.

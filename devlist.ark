@@ -1,0 +1,588 @@
+PCI\VEN_1022&DEV_15BA&SUBSYS_201F1043&REV_00\4&98C338A&0&0441
+    Name: AMD USB 3.10 eXtensible Host Controller - 1.20 (Microsoft)
+    Driver is running.
+SCSI\DISK&VEN_NVME&PROD_WD_PC_SN560_SDDP\5&2FEDB338&0&000000
+    Name: WD PC SN560 SDDPNQE-1T00-1002
+    Driver is running.
+USB\ROOT_HUB30\5&307E18D0&0&0
+    Name: USB Root Hub (USB 3.0)
+    Driver is running.
+ACPI\PNP0C02\4&98C338A&0
+    Name: Motherboard resources
+    Device is currently stopped.
+STORAGE\VOLUME\{4C340B6B-4774-11EE-9DF0-806E6F6E6963}#000000EE67600000
+    Name: Volume
+    Driver is running.
+USB\VID_2B7E&PID_C705&MI_02\7&1A8B6C69&0&0002
+    Name: USB2.0 IR UVC WebCam
+    Driver is running.
+STORAGE\VOLUME\{4C340B6B-4774-11EE-9DF0-806E6F6E6963}#0000000010500000
+    Name: Volume
+    Driver is running.
+ACPI\PNP0C0A\1
+    Name: Microsoft ACPI-Compliant Control Method Battery
+    Driver is running.
+ACPI\ASUS2018\2&DABA3FF&0
+    Name: ASUS System Control Interface v3
+    Device is currently stopped.
+USB\ROOT_HUB30\5&11F640E9&0&0
+    Name: USB Root Hub (USB 3.0)
+    Driver is running.
+STORAGE\VOLUME\{4C340B6B-4774-11EE-9DF0-806E6F6E6963}#000000E7E7600000
+    Name: Volume
+    Driver is running.
+ACPI\CSC3551\1
+    Name: Cirrus Logic Awesome Speaker Amps
+    Driver is running.
+STORAGE\VOLUME\{4C340B6B-4774-11EE-9DF0-806E6F6E6963}#0000000000100000
+    Name: Volume
+    Driver is running.
+SWD\PRINTENUM\PRINTQUEUES
+    Name: Root Print Queue
+    Driver is running.
+SWD\DRIVERENUM\{5419ED65-17B4-4191-8576-3194BD247309}#DOLBYAPO_DAX3HSA_DOLBYACCESS&6&390BC164&0
+    Name: DolbyAPO Software Device (HSA)
+    Driver is running.
+PCI\VEN_1022&DEV_14F5&SUBSYS_00000000&REV_00\3&11583659&0&C5
+    Name: PCI standard host CPU bridge
+    Driver is running.
+ROOT\VOLMGR\0000
+    Name: Volume Manager
+    Driver is running.
+ACPI\PNP0103\2&DABA3FF&0
+    Name: High precision event timer
+    Device is currently stopped.
+HID\VID_0B05&PID_19B6&COL01\7&17810770&0&0000
+    Name: HID-compliant vendor-defined device
+    Driver is running.
+HID\VID_0B05&PID_19B6&COL06\7&17810770&0&0005
+    Name: HID-compliant wireless radio controls
+    Driver is running.
+USB\VID_0BDA&PID_8153\CEE380
+    Name: Realtek USB GbE Family Controller
+    Driver is running.
+ROOT\VMBUS\0000
+    Name: Microsoft Hyper-V Virtual Machine Bus Provider
+    Driver is running.
+SWD\RADIO\{068BDC72-90E1-48D6-984A-1EBC86A0323A}
+    Name: Wi-Fi
+    Driver is running.
+ACPI\PNP0800\4&29CADD38&0
+    Name: System speaker
+    Device is currently stopped.
+ROOT\BASICDISPLAY\0000
+    Name: Microsoft Basic Display Driver
+    Driver is running.
+BTH\MS_BTHBRB\8&182CDD2&0&1
+    Name: Microsoft Bluetooth Enumerator
+    Driver is running.
+DISPLAY\TMX1401\5&1F08C561&0&UID512
+    Name: Integrated Monitor (TL140ADXP02-0)
+    Driver is running.
+ACPI\PNP0C0E\2&DABA3FF&0
+    Name: ACPI Sleep Button
+    Driver is running.
+ROOT\HVSERVICE\0000
+    Name: Microsoft Hypervisor Service
+    Driver is running.
+PCI\VEN_1022&DEV_790E&SUBSYS_14531043&REV_51\3&11583659&0&A3
+    Name: PCI standard ISA bridge
+    Driver is running.
+ACPI\AMDI0030\0
+    Name: AMD GPIO Controller
+    Driver is running.
+HID\ASUF1204&COL04\4&1356C909&0&0003
+    Name: HID-compliant vendor-defined device
+    Driver is running.
+ACPI\PNP0C0D\4&29CADD38&0
+    Name: ACPI Lid
+    Driver is running.
+PCI\VEN_15B7&DEV_5017&SUBSYS_501715B7&REV_01\4&37E80C20&0&0014
+    Name: Standard NVM Express Controller
+    Driver is running.
+PCI\VEN_1022&DEV_14EB&SUBSYS_14EB1022&REV_00\3&11583659&0&41
+    Name: PCI Express Root Port
+    Driver is running.
+PCI\VEN_1022&DEV_14EB&SUBSYS_14EB1022&REV_00\3&11583659&0&42
+    Name: PCI Express Root Port
+    Driver is running.
+PCI\VEN_1022&DEV_14EB&SUBSYS_14EB1022&REV_00\3&11583659&0&43
+    Name: PCI Express Root Port
+    Driver is running.
+PCI\VEN_1022&DEV_15C7&SUBSYS_14531043&REV_00\4&98C338A&0&0241
+    Name: AMD PSP 11.0 Device
+    Driver is running.
+PCI\VEN_1022&DEV_14ED&SUBSYS_14531043&REV_00\3&11583659&0&09
+    Name: PCI Express Root Port
+    Driver is running.
+ACPI\THERMALZONE\TZ01
+    Name: ACPI Thermal Zone
+    Driver is running.
+USB4\VIRTUAL_POWER_PDO\5&66DD325&0&0
+    Name: USB4 Virtual power coordination device
+    Driver is running.
+SWD\RADIO\BLUETOOTH_00410EEDCD6E
+    Name: Bluetooth
+    Driver is running.
+PCI\VEN_1022&DEV_14F2&SUBSYS_00000000&REV_00\3&11583659&0&C2
+    Name: PCI standard host CPU bridge
+    Driver is running.
+ACPI\ACPI0010\1
+    Name: ACPI Processor Container Device
+    Driver is running.
+PCI\VEN_1022&DEV_15C1&SUBSYS_201F1043&REV_00\4&1BE72DC0&0&0443
+    Name: AMD USB 3.10 eXtensible Host Controller - 1.20 (Microsoft)
+    Driver is running.
+ACPI\USBC000\0
+    Name: UCM-UCSI ACPI Device
+    Driver is running.
+PCI\VEN_1022&DEV_15E2&SUBSYS_14631043&REV_63\4&98C338A&0&0541
+    Name: AMD Audio CoProcessor
+    Driver is running.
+PCI\VEN_1022&DEV_790B&SUBSYS_14531043&REV_71\3&11583659&0&A0
+    Name: AMD SMBUS
+    Device is currently stopped.
+BTH\MS_BTHLE\8&182CDD2&0&3
+    Name: Microsoft Bluetooth LE Enumerator
+    Driver is running.
+PCI\VEN_1022&DEV_14EA&SUBSYS_00000000&REV_00\3&11583659&0&08
+    Name: PCI standard host CPU bridge
+    Driver is running.
+PCI\VEN_1022&DEV_14EA&SUBSYS_00000000&REV_00\3&11583659&0&10
+    Name: PCI standard host CPU bridge
+    Driver is running.
+PCI\VEN_1022&DEV_14EA&SUBSYS_00000000&REV_00\3&11583659&0&18
+    Name: PCI standard host CPU bridge
+    Driver is running.
+PCI\VEN_1022&DEV_14EA&SUBSYS_00000000&REV_00\3&11583659&0&20
+    Name: PCI standard host CPU bridge
+    Driver is running.
+PCI\VEN_1022&DEV_14EA&SUBSYS_00000000&REV_00\3&11583659&0&40
+    Name: PCI standard host CPU bridge
+    Driver is running.
+PCI\VEN_1002&DEV_1640&SUBSYS_180D1043&REV_00\4&98C338A&0&0141
+    Name: High Definition Audio Bus
+    Driver is running.
+SWD\DRIVERENUM\{C3A63EDD-2D27-4B66-B155-5E94B43D926A}#REALTEKOVWRAP2&6&390BC164&0
+    Name: Realtek OVWrap2 Component
+    Driver is running.
+ROOT\VID\0000
+    Name: Microsoft Hyper-V Virtualization Infrastructure Driver
+    Driver is running.
+SWD\DRIVERENUM\{C3A63EDD-2D27-4B66-B155-5E94B43D926A}#REALTEKINTAPO&6&390BC164&0
+    Name: Realtek Audio Effects Component (INT)
+    Driver is running.
+{5D624F94-8850-40C3-A3FA-A4FD2080BAF3}\VWIFIMP_WFD\5&26F01662&0&11
+    Name: Microsoft Wi-Fi Direct Virtual Adapter
+    Driver is running.
+USB\VID_2B7E&PID_C705\200901010001
+    Name: USB Composite Device
+    Driver is running.
+ROOT\COMPOSITEBUS\0000
+    Name: Composite Bus Enumerator
+    Driver is running.
+ROOT\VDRVROOT\0000
+    Name: Microsoft Virtual Drive Enumerator
+    Driver is running.
+PCI\VEN_1022&DEV_14EF&SUBSYS_14531022&REV_00\3&11583659&0&19
+    Name: PCI Express Root Port
+    Driver is running.
+ACPI\PNP0100\4&29CADD38&0
+    Name: System timer
+    Device is currently stopped.
+ACP\DEVTYPE_0004&DEVREV_0000&VEN_1022&DEV_15E2&SUBSYS_10431463&REV_63\5&DC69C90&0&05
+    Name: AMD BT Audio Device
+    Driver is running.
+ROOT\SPACEPORT\0000
+    Name: Microsoft Storage Spaces Controller
+    Driver is running.
+HID\VID_0B05&PID_19B6&COL02\7&17810770&0&0001
+    Name: HID Keyboard Device
+    Driver is running.
+HID\VID_0B05&PID_19B6&COL07\7&17810770&0&0006
+    Name: HID-compliant mouse
+    Driver is running.
+ROOT\KDNIC\0000
+    Name: Microsoft Kernel Debug Network Adapter
+    Driver is running.
+ACPI\ATK3001\4&29CADD38&0
+    Name: PC/AT Enhanced PS/2 Keyboard (101/102-Key)
+    Driver is running.
+PCI\VEN_1022&DEV_14F7&SUBSYS_00000000&REV_00\3&11583659&0&C7
+    Name: PCI standard host CPU bridge
+    Driver is running.
+PCI\VEN_1022&DEV_14EC&SUBSYS_14531043&REV_00\4&92D7D1B&0&0042
+    Name: AMD PCI
+    Device is currently stopped.
+SWD\DRIVERENUM\{C3A63EDD-2D27-4B66-B155-5E94B43D926A}#REALTEKHSA&6&390BC164&0
+    Name: Realtek Hardware Support Application
+    Driver is running.
+SWD\DRIVERENUM\AMDUWP&5&1F08C561&0
+    Name: AMD-UWP Version Control
+    Driver is running.
+HID\VID_0B05&PID_193B&COL01\7&1C351490&0&0000
+    Name: HID-compliant vendor-defined device
+    Driver is running.
+ACPI\PS883008\1
+    Name: PRHidDrv10 PS883008 Peripheral Driver
+    Driver is running.
+UEFI\RES_{C3742F8C-9A70-5090-9561-E21558E5302C}\0
+    Name: System Firmware
+    Driver is running.
+HID\ASUF1204&COL05\4&1356C909&0&0004
+    Name: HID-compliant vendor-defined device
+    Driver is running.
+ACPI\PS88300A\1
+    Name: PS88300A Peripheral Driver
+    Driver is running.
+ACPI\PS88300F\1
+    Name: PS88300F Peripheral Driver
+    Driver is running.
+PCI\VEN_1002&DEV_15BF&SUBSYS_180D1043&REV_C1\4&98C338A&0&0041
+    Name: AMD Radeon 780M Graphics
+    Driver is running.
+ROOT\WINDOWSHELLOFACESOFTWAREDRIVER\0000
+    Name: Facial Recognition (Windows Hello) Software Device
+    Driver is running.
+ACPI\PNP0C14\0X00
+    Name: Microsoft Windows Management Interface for ACPI
+    Driver is running.
+HDAUDIO\FUNC_01&VEN_1002&DEV_AA01&SUBSYS_00AA0100&REV_1008\5&3A88684A&0&0001
+    Name: AMD High Definition Audio Device
+    Driver is running.
+USB\VID_0B05&PID_19B6\6&4420B4E&0&3
+    Name: USB Input Device
+    Driver is running.
+PCI\VEN_14C3&DEV_0616&SUBSYS_E0DF105B&REV_00\4&2B6EFE88&0&0012
+    Name: MediaTek Wi-Fi 6E MT7922 (RZ616) 160MHz Wireless LAN Card
+    Driver is running.
+ROOT\UMBUS\0000
+    Name: UMBus Root Bus Enumerator
+    Driver is running.
+ROOT\CAD\0000
+    Name: Charge Arbitration Driver
+    Driver is running.
+USB\VID_2B7E&PID_C705&MI_04\7&1A8B6C69&0&0004
+    Name: Camera DFU Device
+    Driver is running.
+PCI\VEN_1022&DEV_14F4&SUBSYS_00000000&REV_00\3&11583659&0&C4
+    Name: PCI standard host CPU bridge
+    Driver is running.
+SWD\RADIO\{3DB5895D-CC28-44B3-AD3D-6F01A782B8D2}
+    Name: Microsoft Radio Device Enumeration Bus
+    Driver is running.
+STORAGE\VOLUME\{4C340B6B-4774-11EE-9DF0-806E6F6E6963}#000000E7B5600000
+    Name: Volume
+    Driver is running.
+ACPI\PNP0C01\C8
+    Name: System board
+    Device is currently stopped.
+SWD\MSDAS\{CE958E9A-424F-4C88-86F4-11314821E75A}
+    Name: Microsoft Device Association Root Enumerator
+    Driver is running.
+ROOT\ACPI_HAL\0000
+    Name: ACPI x64-based PC
+    Driver is running.
+PCI\VEN_1022&DEV_15E3&SUBSYS_14631043&REV_00\4&98C338A&0&0641
+    Name: High Definition Audio Controller
+    Driver is running.
+HID\VID_0B05&PID_19B6&COL03\7&17810770&0&0002
+    Name: HID-compliant vendor-defined device
+    Driver is running.
+ACPI\PNP0C14\AOD
+    Name: Microsoft Windows Management Interface for ACPI
+    Driver is running.
+ACPI\PNP0C14\ATK
+    Name: Microsoft Windows Management Interface for ACPI
+    Driver is running.
+PCI\VEN_1022&DEV_15C0&SUBSYS_201F1043&REV_00\4&1BE72DC0&0&0343
+    Name: AMD USB 3.10 eXtensible Host Controller - 1.20 (Microsoft)
+    Driver is running.
+ACPI\PNP0A08\0
+    Name: PCI Express Root Complex
+    Driver is running.
+SWD\SGDEVAPI\A6BEEFD2A532BC11EEF377764CA24E78EFC5F4189FE5360D4F92328A12D28EFB
+    Name: Rts-DMFT-Group
+    Driver is running.
+HID\VID_0B05&PID_19B6&COL08\7&17810770&0&0007
+    Name: HID-compliant system controller
+    Driver is running.
+BTH\MS_RFCOMM\8&182CDD2&0&0
+    Name: Bluetooth Device (RFCOMM Protocol TDI)
+    Driver is running.
+ACPI\ASUF1204\1
+    Name: I2C HID Device
+    Driver is running.
+SWD\DRIVERENUM\{C3A63EDD-2D27-4B66-B155-5E94B43D926A}#REALTEKSRV&6&390BC164&0
+    Name: Realtek Audio Universal Service
+    Driver is running.
+PCI\VEN_10DE&DEV_22BE&SUBSYS_180D1043&REV_A1\4&2B5A5DA1&0&0109
+    Name: High Definition Audio Controller
+    Driver is running.
+ROOT\VPCIVSP\0000
+    Name: Microsoft Hyper-V PCI Server
+    Driver is running.
+ACPI\PS883011\1
+    Name: PS883011 Peripheral Driver
+    Driver is running.
+USB\VID_0489&PID_E0F6&MI_00\7&16AFF0D1&0&0000
+    Name: MediaTek Bluetooth Adapter
+    Driver is running.
+ACPI_HAL\PNP0C08\0
+    Name: Microsoft ACPI-Compliant System
+    Driver is running.
+HTREE\ROOT\0
+    Driver is running.
+ROOT\BASICRENDER\0000
+    Name: Microsoft Basic Render Driver
+    Driver is running.
+HID\VID_0B05&PID_193B&COL02\7&1C351490&0&0001
+    Name: HID-compliant vendor-defined device
+    Driver is running.
+PCI\VEN_1022&DEV_14F1&SUBSYS_00000000&REV_00\3&11583659&0&C1
+    Name: PCI standard host CPU bridge
+    Driver is running.
+HID\ASUF1204&COL01\4&1356C909&0&0000
+    Name: HID-compliant mouse
+    Driver is running.
+ACPI_HAL\UEFI\0
+    Name: Microsoft UEFI-Compliant System
+    Driver is running.
+USB\ROOT_HUB30\5&3538454C&0&0
+    Name: USB Root Hub (USB 3.0)
+    Driver is running.
+PCI\VEN_1022&DEV_14EC&SUBSYS_14531043&REV_00\4&1BE72DC0&0&0043
+    Name: AMD PCI
+    Device is currently stopped.
+ACPI\MSFT0101\1
+    Name: Trusted Platform Module 2.0
+    Driver is running.
+PCI\VEN_1022&DEV_14E8&SUBSYS_14531043&REV_00\3&11583659&0&00
+    Name: PCI standard host CPU bridge
+    Driver is running.
+USB4\ROOT_DEVICE_ROUTER&VID_1022&PID_1668\5&66DD325&0&0
+    Name: USB4(TM) Root Device Router (Microsoft)
+    Driver is running.
+ACPI\AMDI0009\1
+    Name: AMD Micro PEP Device
+    Driver is running.
+USB\VID_2B7E&PID_C705&MI_00\7&1A8B6C69&0&0000
+    Name: USB2.0 FHD UVC WebCam
+    Driver is running.
+VHF\HID_DEVICE_SYSTEM_VHF\4&539A570&0&{E81F046B-AC66-5CEB-A6AF-4CA8B1E12BFC}
+    Name: Virtual HID Framework (VHF) HID device
+    Driver is running.
+HDAUDIO\FUNC_01&VEN_10EC&DEV_0285&SUBSYS_10431463&REV_1000\5&64076D2&0&0001
+    Name: Realtek(R) Audio
+    Driver is running.
+ACPI\PNP0C02\90
+    Name: Motherboard resources
+    Device is currently stopped.
+ACPI\AUTHENTICAMD_-_AMD64_FAMILY_25_MODEL_116_-_AMD_RYZEN_9_7940HS_W/_RADEON_780M_GRAPHICS_____\0
+    Name: AMD Ryzen 9 7940HS w/ Radeon 780M Graphics     
+    Driver is running.
+ACPI\AUTHENTICAMD_-_AMD64_FAMILY_25_MODEL_116_-_AMD_RYZEN_9_7940HS_W/_RADEON_780M_GRAPHICS_____\1
+    Name: AMD Ryzen 9 7940HS w/ Radeon 780M Graphics     
+    Driver is running.
+ACPI\AUTHENTICAMD_-_AMD64_FAMILY_25_MODEL_116_-_AMD_RYZEN_9_7940HS_W/_RADEON_780M_GRAPHICS_____\2
+    Name: AMD Ryzen 9 7940HS w/ Radeon 780M Graphics     
+    Driver is running.
+ACPI\AUTHENTICAMD_-_AMD64_FAMILY_25_MODEL_116_-_AMD_RYZEN_9_7940HS_W/_RADEON_780M_GRAPHICS_____\3
+    Name: AMD Ryzen 9 7940HS w/ Radeon 780M Graphics     
+    Driver is running.
+ACPI\AUTHENTICAMD_-_AMD64_FAMILY_25_MODEL_116_-_AMD_RYZEN_9_7940HS_W/_RADEON_780M_GRAPHICS_____\4
+    Name: AMD Ryzen 9 7940HS w/ Radeon 780M Graphics     
+    Driver is running.
+ACPI\AUTHENTICAMD_-_AMD64_FAMILY_25_MODEL_116_-_AMD_RYZEN_9_7940HS_W/_RADEON_780M_GRAPHICS_____\5
+    Name: AMD Ryzen 9 7940HS w/ Radeon 780M Graphics     
+    Driver is running.
+ACPI\AUTHENTICAMD_-_AMD64_FAMILY_25_MODEL_116_-_AMD_RYZEN_9_7940HS_W/_RADEON_780M_GRAPHICS_____\6
+    Name: AMD Ryzen 9 7940HS w/ Radeon 780M Graphics     
+    Driver is running.
+ACPI\AUTHENTICAMD_-_AMD64_FAMILY_25_MODEL_116_-_AMD_RYZEN_9_7940HS_W/_RADEON_780M_GRAPHICS_____\7
+    Name: AMD Ryzen 9 7940HS w/ Radeon 780M Graphics     
+    Driver is running.
+ACPI\AUTHENTICAMD_-_AMD64_FAMILY_25_MODEL_116_-_AMD_RYZEN_9_7940HS_W/_RADEON_780M_GRAPHICS_____\8
+    Name: AMD Ryzen 9 7940HS w/ Radeon 780M Graphics     
+    Driver is running.
+ACPI\AUTHENTICAMD_-_AMD64_FAMILY_25_MODEL_116_-_AMD_RYZEN_9_7940HS_W/_RADEON_780M_GRAPHICS_____\9
+    Name: AMD Ryzen 9 7940HS w/ Radeon 780M Graphics     
+    Driver is running.
+ACPI\AUTHENTICAMD_-_AMD64_FAMILY_25_MODEL_116_-_AMD_RYZEN_9_7940HS_W/_RADEON_780M_GRAPHICS_____\A
+    Name: AMD Ryzen 9 7940HS w/ Radeon 780M Graphics     
+    Driver is running.
+ACPI\AUTHENTICAMD_-_AMD64_FAMILY_25_MODEL_116_-_AMD_RYZEN_9_7940HS_W/_RADEON_780M_GRAPHICS_____\B
+    Name: AMD Ryzen 9 7940HS w/ Radeon 780M Graphics     
+    Driver is running.
+ACPI\AUTHENTICAMD_-_AMD64_FAMILY_25_MODEL_116_-_AMD_RYZEN_9_7940HS_W/_RADEON_780M_GRAPHICS_____\C
+    Name: AMD Ryzen 9 7940HS w/ Radeon 780M Graphics     
+    Driver is running.
+ACPI\AUTHENTICAMD_-_AMD64_FAMILY_25_MODEL_116_-_AMD_RYZEN_9_7940HS_W/_RADEON_780M_GRAPHICS_____\D
+    Name: AMD Ryzen 9 7940HS w/ Radeon 780M Graphics     
+    Driver is running.
+ACPI\AUTHENTICAMD_-_AMD64_FAMILY_25_MODEL_116_-_AMD_RYZEN_9_7940HS_W/_RADEON_780M_GRAPHICS_____\E
+    Name: AMD Ryzen 9 7940HS w/ Radeon 780M Graphics     
+    Driver is running.
+ACPI\AUTHENTICAMD_-_AMD64_FAMILY_25_MODEL_116_-_AMD_RYZEN_9_7940HS_W/_RADEON_780M_GRAPHICS_____\F
+    Name: AMD Ryzen 9 7940HS w/ Radeon 780M Graphics     
+    Driver is running.
+ACPI\PNP0B00\4&29CADD38&0
+    Name: System CMOS/real time clock
+    Driver is running.
+HID\HID_DEVICE_SYSTEM_VHF\5&2B6931E2&0&0000
+    Name: PS8830 Firmware Driver
+    Driver is running.
+HID\VID_0B05&PID_19B6&COL04\7&17810770&0&0003
+    Name: HID-compliant vendor-defined device
+    Driver is running.
+PCI\VEN_1022&DEV_15B9&SUBSYS_201F1043&REV_00\4&98C338A&0&0341
+    Name: AMD USB 3.10 eXtensible Host Controller - 1.20 (Microsoft)
+    Driver is running.
+HID\VID_0B05&PID_19B6&COL09\7&17810770&0&0008
+    Name: HID-compliant vendor-defined device
+    Driver is running.
+SWD\COMPUTER\MFG_ASUSTEK_COMPUTER_INC.&FAM_ROG_ZEPHYRUS_G14&PROD_ROG_ZEPHYRUS_G14_GA402XV_GA402XV
+    Name: ASUSTeK COMPUTER INC. ROG Zephyrus G14 GA402XV_GA402XV
+    Driver is running.
+PCI\VEN_1022&DEV_14F6&SUBSYS_00000000&REV_00\3&11583659&0&C6
+    Name: PCI standard host CPU bridge
+    Driver is running.
+ROOT\STORVSP\0000
+    Name: Microsoft Hyper-V Virtual Disk Server
+    Driver is running.
+ACPI\PNP0000\4&29CADD38&0
+    Name: Programmable interrupt controller
+    Device is currently stopped.
+SWD\MMDEVAPI\{0.0.0.00000000}.{5809730A-7F2E-4079-98A1-C692303E315F}
+    Name: Speakers (Realtek(R) Audio)
+    Driver is running.
+ROOT\UNNAMED_DEVICE\0000
+    Name: NVIDIA Virtual Audio Device (Wave Extensible) (WDM)
+    Driver is running.
+ROOT\UNNAMED_DEVICE\0001
+    Name: NvModuleTracker Device
+    Driver is running.
+ROOT\UNNAMED_DEVICE\0002
+    Name: NVVHCI Enumerator
+    Driver is running.
+SWD\MMDEVAPI\MICROSOFTGSWAVETABLESYNTH
+    Name: Microsoft GS Wavetable Synth
+    Driver is running.
+ACPI\PNP0C0C\AA
+    Name: ACPI Power Button
+    Driver is running.
+SWD\DRIVERENUM\{5419ED65-17B4-4191-8576-3194BD247309}#DOLBYAPO_DAX3APOSVC&6&390BC164&0
+    Name: DolbyAPO SWC Device
+    Driver is running.
+HID\ASUF1204&COL02\4&1356C909&0&0001
+    Name: ASUS Precision Touchpad
+    Driver is running.
+ACP\DEVTYPE_0001&DEVREV_0000&VEN_1022&DEV_15E2&SUBSYS_10431463&REV_63\5&DC69C90&0&01
+    Name: ACP HDA Node
+    Driver is running.
+SWD\DRIVERENUM\{C3A63EDD-2D27-4B66-B155-5E94B43D926A}#REALTEKASIO&6&390BC164&0
+    Name: Realtek Asio Component
+    Driver is running.
+SWD\DRIVERENUM\{C3A63EDD-2D27-4B66-B155-5E94B43D926A}#REALTEKAPO&6&390BC164&0
+    Name: Realtek Audio Effects Component
+    Driver is running.
+ROOT\AMDLOG\0000
+    Name: AMD Crash Defender
+    Driver is running.
+ROOT\NDISVIRTUALBUS\0000
+    Name: NDIS Virtual Network Adapter Enumerator
+    Driver is running.
+ACPI\AMDI0010\0
+    Name: AMD I2C Controller
+    Driver is running.
+ACPI\AMDI0010\1
+    Name: AMD I2C Controller
+    Driver is running.
+ACPI\AMDI0010\3
+    Name: AMD I2C Controller
+    Driver is running.
+ACPI\NVDA0820\NPCF
+    Name: NVIDIA Platform Controllers and Framework
+    Driver is running.
+PCI\VEN_10DE&DEV_28E0&SUBSYS_180D1043&REV_A1\4&2B5A5DA1&0&0009
+    Name: NVIDIA GeForce RTX 4060 Laptop GPU
+    Driver is running.
+HDAUDIO\FUNC_01&VEN_10DE&DEV_00A7&SUBSYS_1043180D&REV_1001\5&31F37D8B&0&0001
+    Name: NVIDIA High Definition Audio
+    Driver is running.
+PCI\VEN_1022&DEV_14EE&SUBSYS_14531043&REV_00\3&11583659&0&12
+    Name: PCI Express Root Port
+    Driver is running.
+PCI\VEN_1022&DEV_14EE&SUBSYS_14531043&REV_00\3&11583659&0&13
+    Name: PCI Express Root Port
+    Driver is running.
+PCI\VEN_1022&DEV_14EE&SUBSYS_14531043&REV_00\3&11583659&0&14
+    Name: PCI Express Root Port
+    Driver is running.
+ACPI\PNP0200\4&29CADD38&0
+    Name: Direct memory access controller
+    Device is currently stopped.
+PCI\VEN_1022&DEV_14F3&SUBSYS_00000000&REV_00\3&11583659&0&C3
+    Name: PCI standard host CPU bridge
+    Driver is running.
+USB\VID_0489&PID_E0F6\000000000
+    Name: USB Composite Device
+    Driver is running.
+ACPI\PNP0C02\700
+    Name: Motherboard resources
+    Device is currently stopped.
+BTH\MS_BTHPAN\8&182CDD2&0&2
+    Name: Bluetooth Device (Personal Area Network)
+    Driver is running.
+PCI\VEN_1022&DEV_1502&SUBSYS_15021022&REV_00\4&92D7D1B&0&0142
+    Name: AMD IPU Device
+    Driver is running.
+ACPI\ASUS9001\2&DABA3FF&0
+    Name: Armoury Crate Control Interface
+    Device is currently stopped.
+STORAGE\VOLUME\{4C340B6B-4774-11EE-9DF0-806E6F6E6963}#0000000011500000
+    Name: Volume
+    Driver is running.
+PCI\VEN_10EC&DEV_525A&SUBSYS_202F1043&REV_01\00000001004CE00000
+    Name: Realtek PCIE CardReader
+    Driver is running.
+HID\VID_0B05&PID_19B6&COL05\7&17810770&0&0004
+    Name: HID-compliant consumer control device
+    Driver is running.
+ROOT\MSSMBIOS\0000
+    Name: Microsoft System Management BIOS Driver
+    Driver is running.
+USB\VID_0B05&PID_193B\6&4420B4E&0&4
+    Name: USB Input Device
+    Driver is running.
+SWD\MMDEVAPI\{0.0.1.00000000}.{41C33564-71D3-40CC-B855-D9A8BA5CD000}
+    Name: Microphone Array (Realtek(R) Audio)
+    Driver is running.
+PCI\VEN_1022&DEV_14F0&SUBSYS_00000000&REV_00\3&11583659&0&C0
+    Name: PCI standard host CPU bridge
+    Driver is running.
+ROOT\SYSTEM\0000
+    Name: Plug and Play Software Device Enumerator
+    Driver is running.
+ACPI\ACPI0003\4&29CADD38&0
+    Name: Microsoft AC Adapter
+    Driver is running.
+ACPI\PNP0C14\ITKS
+    Name: Microsoft Windows Management Interface for ACPI
+    Driver is running.
+USB\ROOT_HUB30\5&34C0E95C&0&0
+    Name: USB Root Hub (USB 3.0)
+    Driver is running.
+ROOT\RDPBUS\0000
+    Name: Remote Desktop Device Redirector Bus
+    Driver is running.
+HID\ASUF1204&COL03\4&1356C909&0&0002
+    Name: Microsoft Input Configuration Device
+    Driver is running.
+PCI\VEN_1022&DEV_1668&SUBSYS_20AF1043&REV_00&USB4_MS_CM\4&1BE72DC0&0&0543
+    Name: USB4(TM) Host Router (Microsoft)
+    Driver is running.
+ACPI\AMDI0052\2&DABA3FF&0
+    Name: AMD PPM Provisioning File
+    Device is currently stopped.
+196 matching device(s) found.

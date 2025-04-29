@@ -1,0 +1,81 @@
+﻿unit ProcessUnit;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Imaging.GIFImg, Vcl.ExtCtrls, Huffman2, Lz772, LZW2;
+
+procedure Archive(InputFileName: string; OutputFileName: string; Algorithm: integer);
+procedure Unarchive(InputFileName: string; OutputDirectory: string);
+
+implementation
+
+procedure Archive(InputFileName: string; OutputFileName: string; Algorithm: integer);
+var FlName: string;
+    InputData, OutputData: TBytes;
+begin
+  InputData := ReadFileBytes(InputFileName);
+  FlName := ExtractFileName(InputFileName);
+  case Algorithm of
+    0: OutputData := Huffman2.CompressData(InputData, FlName);
+    1: OutputData := Lz772.CompressData(InputData, FlName);
+    2: OutputData := LZW2.CompressData(InputData, FlName);
+  end;
+  SaveBytesToFile(OutputData, OutputFileName);
+end;
+
+procedure Unarchive(InputFileName: string; OutputDirectory: string);
+var FlName: string;
+    Algorithm: Byte;
+    InputData, OutputData, sad: TBytes;
+begin
+  InputData := ReadFileBytes(InputFileName);
+  Algorithm := InputData[0];
+  SetLength(FlName, InputData[1]);
+  SetLength(sad, InputData[1]);
+  for var i := 0 to InputData[1]-1 do
+    sad[i] := InputData[i+2];
+  FlName := TEncoding.UTF8.GetString(sad);
+  case Algorithm of
+  0: OutputData := Huffman2.DeCompressData(InputData);
+  1: OutputData := Lz772.DeCompressData(InputData);
+  2: OutputData := LZW2.DeCompressData(InputData);
+  end;
+  SaveBytesToFile(OutputData, OutputDirectory + '\' + FlName);
+end;
+
+//Чтение файла в массив байтов
+function ReadFileBytes(const FileName: string): TBytes;
+var
+  F: File;
+  Size: Integer;
+begin
+  AssignFile(F, FileName);
+  Reset(F, 1); // Открыть файл для чтения (1 = размер блока 1 байт)
+  try
+    Size := FileSize(F);
+    SetLength(Result, Size);
+    if Size > 0 then
+      BlockRead(F, Result[0], Size); // Чтение всего файла
+  finally
+    CloseFile(F);
+  end;
+end;
+
+// Запись TBytes в файл
+procedure SaveBytesToFile(const Data: TBytes; const FileName: string);
+var
+  F: File;
+begin
+  AssignFile(F, FileName);
+  Rewrite(F, 1); // Создать файл для записи
+  try
+    if Length(Data) > 0 then
+      BlockWrite(F, Data[0], Length(Data)); // Запись всех данных
+  finally
+    CloseFile(F);
+  end;
+end;
+
+end.

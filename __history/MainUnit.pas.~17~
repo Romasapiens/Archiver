@@ -1,0 +1,97 @@
+unit MainUnit;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.FileCtrl, Vcl.StdCtrls, ArchiveUnit, ProgressUnit;
+
+type
+  TMainForm = class(TForm)
+    DriveComboBox1: TDriveComboBox;
+    DirectoryListBox1: TDirectoryListBox;
+    FileListBox1: TFileListBox;
+    archiveButton: TButton;
+    unarchiveButton: TButton;
+    closeButton: TButton;
+    procedure DirectoryListBox1Click(Sender: TObject);
+    procedure closeButtonClick(Sender: TObject);
+    procedure FileListBox1Change(Sender: TObject);
+    procedure archiveButtonClick(Sender: TObject);
+    procedure unarchiveButtonClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  MainForm: TMainForm;
+  fileName: string;
+
+implementation
+
+{$R *.dfm}
+
+procedure TMainForm.archiveButtonClick(Sender: TObject);
+begin
+  var archiveForm := TArchiveForm.Create(self);
+  try
+    archiveForm.InputFileName := FileListBox1.FileName;
+    archiveForm.InitialDir := FileListBox1.Directory;
+    archiveForm.ShowModal;
+  finally
+    archiveForm.Free;
+  end;
+end;
+
+procedure TMainForm.closeButtonClick(Sender: TObject);
+begin
+  MainForm.Close();
+end;
+
+procedure TMainForm.DirectoryListBox1Click(Sender: TObject);
+begin
+  DirectoryListBox1.OpenCurrent();
+  FileListBox1.Directory := DirectoryListBox1.Directory;
+end;
+
+procedure TMainForm.FileListBox1Change(Sender: TObject);
+begin
+  fileName := FileListBox1.FileName;
+
+  if (fileName.IsEmpty) then
+  begin
+    archiveButton.Enabled := false;
+    unarchiveButton.Enabled := false;
+  end
+  else
+  begin
+    archiveButton.Enabled := true;
+    unarchiveButton.Enabled := ExtractFileExt(fileName) = '.ark';
+  end;
+end;
+
+procedure TMainForm.unarchiveButtonClick(Sender: TObject);
+const
+  SELDIRHELP = 1000;
+var
+  Directory: string;
+begin
+  Directory := DirectoryListBox1.Directory;
+
+  if SelectDirectory(Directory, [sdAllowCreate, sdPerformCreate, sdPrompt], SELDIRHELP) then
+  begin
+    var progressForm := TProgressForm.Create(self);
+    try
+      progressForm.InputFileName := FileListBox1.FileName;
+      progressForm.OutputDirectory := Directory;
+      progressForm.ProcessType := 1;
+      progressForm.ShowModal;
+    finally
+      progressForm.Free;
+    end;
+  end;
+end;
+
+end.

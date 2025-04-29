@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2025/04/19 18:58:06.000.792,=C:\Users\akhom\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/04/19 18:59:30.000.439,C:\Users\akhom\OneDrive\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\akhom\OneDrive\Documents\Embarcadero\Studio\Projects\Archiver.dproj</Transaction>
+    <Transaction>2025/04/19 18:59:44.000.107,C:\Users\akhom\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\akhom\OneDrive\Documents\Embarcadero\Studio\Projects\MainUnit.pas</Transaction>
+    <Transaction>2025/04/19 18:59:44.000.107,C:\Users\akhom\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\akhom\OneDrive\Documents\Embarcadero\Studio\Projects\MainUnit.dfm</Transaction>
+    <Transaction>2025/04/19 19:01:18.000.761,C:\Users\akhom\OneDrive\Documents\Embarcadero\Studio\Projects\MainUnit.dfm=C:\Projects\Delphi 12\Archiver\MainUnit.dfm</Transaction>
+    <Transaction>2025/04/19 19:01:18.000.761,C:\Users\akhom\OneDrive\Documents\Embarcadero\Studio\Projects\MainUnit.pas=C:\Projects\Delphi 12\Archiver\MainUnit.pas</Transaction>
+    <Transaction>2025/04/19 19:01:23.000.509,C:\Users\akhom\OneDrive\Documents\Embarcadero\Studio\Projects\Archiver.dproj=C:\Projects\Delphi 12\Archiver\Archiver.dproj</Transaction>
+    <Transaction>2025/04/19 19:44:11.000.414,=C:\Projects\Delphi 12\Archiver\Unit1.pas</Transaction>
+    <Transaction>2025/04/19 19:44:34.000.114,C:\Projects\Delphi 12\Archiver\ArchiveDialog.pas=C:\Projects\Delphi 12\Archiver\Unit1.pas</Transaction>
+    <Transaction>2025/04/19 19:44:34.000.114,C:\Projects\Delphi 12\Archiver\ArchiveDialog.dfm=C:\Projects\Delphi 12\Archiver\Unit1.dfm</Transaction>
+    <Transaction>2025/04/19 19:57:17.000.307,C:\Projects\Delphi 12\Archiver\ArchiveUint.pas=C:\Projects\Delphi 12\Archiver\ArchiveDialog.pas</Transaction>
+    <Transaction>2025/04/19 19:57:17.000.307,C:\Projects\Delphi 12\Archiver\ArchiveUint.dfm=C:\Projects\Delphi 12\Archiver\ArchiveDialog.dfm</Transaction>
+    <Transaction>2025/04/19 19:58:10.000.357,C:\Projects\Delphi 12\Archiver\ArchiveUnit.pas=C:\Projects\Delphi 12\Archiver\ArchiveUint.pas</Transaction>
+    <Transaction>2025/04/19 19:58:10.000.357,C:\Projects\Delphi 12\Archiver\ArchiveUnit.dfm=C:\Projects\Delphi 12\Archiver\ArchiveUint.dfm</Transaction>
+    <Transaction>2025/04/19 22:10:18.000.175,=C:\Projects\Delphi 12\Archiver\Unit1.pas</Transaction>
+    <Transaction>2025/04/19 22:10:29.000.560,C:\Projects\Delphi 12\Archiver\ProcessUnit.pas=C:\Projects\Delphi 12\Archiver\Unit1.pas</Transaction>
+    <Transaction>2025/04/20 00:00:28.000.450,=C:\Projects\Delphi 12\Archiver\Unit1.pas</Transaction>
+    <Transaction>2025/04/20 00:01:59.000.941,C:\Projects\Delphi 12\Archiver\ProgressUnit.pas=C:\Projects\Delphi 12\Archiver\Unit1.pas</Transaction>
+    <Transaction>2025/04/20 00:01:59.000.941,C:\Projects\Delphi 12\Archiver\ProgressUnit.dfm=C:\Projects\Delphi 12\Archiver\Unit1.dfm</Transaction>
+    <Transaction>2025/04/20 17:05:04.000.644,=C:\Users\Roman\OneDrive\Документы\Embarcadero\Studio\Projects\Huffman2.pas</Transaction>
+    <Transaction>2025/04/20 17:05:17.000.191,=C:\Users\Roman\OneDrive\Документы\Embarcadero\Studio\Projects\Lz772.pas</Transaction>
+    <Transaction>2025/04/20 17:05:25.000.287,=C:\Users\Roman\OneDrive\Документы\Embarcadero\Studio\Projects\LZW2.pas</Transaction>
+    <Transaction>2025/04/20 20:15:04.000.394,C:\Users\Roman\OneDrive\Документы\Embarcadero\Studio\Projects\LZW2.pas=</Transaction>
+    <Transaction>2025/04/20 20:15:04.000.361,C:\Users\Roman\OneDrive\Документы\Embarcadero\Studio\Projects\Lz772.pas=</Transaction>
+    <Transaction>2025/04/20 20:15:04.000.341,C:\Users\Roman\OneDrive\Документы\Embarcadero\Studio\Projects\Huffman2.pas=</Transaction>
+    <Transaction>2025/04/20 20:15:23.000.661,=C:\Users\Roman\OneDrive\Документы\Embarcadero\Studio\Projects\Archiver\Archiver\LZW2.pas</Transaction>
+    <Transaction>2025/04/20 20:15:23.000.600,=C:\Users\Roman\OneDrive\Документы\Embarcadero\Studio\Projects\Archiver\Archiver\Huffman2.pas</Transaction>
+    <Transaction>2025/04/20 20:15:23.000.612,=C:\Users\Roman\OneDrive\Документы\Embarcadero\Studio\Projects\Archiver\Archiver\Lz772.pas</Transaction>
+    <Transaction>2025/04/21 22:24:26.000.514,C:\Users\Roman\OneDrive\Документы\Embarcadero\Studio\Projects\Archiver\Archiver\Huffman.pas=C:\Users\Roman\OneDrive\Документы\Embarcadero\Studio\Projects\Archiver\Archiver\Huffman2.pas</Transaction>
+    <Transaction>2025/04/21 22:24:33.000.446,C:\Users\Roman\OneDrive\Документы\Embarcadero\Studio\Projects\Archiver\Archiver\LZ77.pas=C:\Users\Roman\OneDrive\Документы\Embarcadero\Studio\Projects\Archiver\Archiver\Lz772.pas</Transaction>
+    <Transaction>2025/04/21 22:24:37.000.870,C:\Users\Roman\OneDrive\Документы\Embarcadero\Studio\Projects\Archiver\Archiver\LZW.pas=C:\Users\Roman\OneDrive\Документы\Embarcadero\Studio\Projects\Archiver\Archiver\LZW2.pas</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="ArchiveUnit.pas"/>
+    <File Path="ArchiveUnit.dfm"/>
+    <File Path="MainUnit.pas"/>
+    <File Path="MainUnit.dfm"/>
+    <File Path="ProcessUnit.pas"/>
+    <File Path="ProgressUnit.pas"/>
+    <File Path="ProgressUnit.dfm"/>
+    <File Path="Huffman.pas"/>
+    <File Path="LZ77.pas"/>
+    <File Path="LZW.pas"/>
+  </ProjectSortOrder>
+</BorlandProject>

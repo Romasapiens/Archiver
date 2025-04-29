@@ -1,0 +1,83 @@
+unit ArchiveUnit;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls,
+  Vcl.Imaging.GIFImg, Vcl.ExtCtrls, System.Skia, Vcl.Skia, ProgressUnit;
+
+type
+  TArchiveForm = class(TForm)
+    editFileName: TEdit;
+    chooseFileButton: TButton;
+    fileSaveDialog: TSaveDialog;
+    AlgorithmGroupBox: TGroupBox;
+    Algorithm1: TRadioButton;
+    Algorithm2: TRadioButton;
+    Algorithm3: TRadioButton;
+    archiveButton: TButton;
+    cancelButton: TButton;
+    procedure chooseFileButtonClick(Sender: TObject);
+    procedure cancelButtonClick(Sender: TObject);
+    procedure editFileNameChange(Sender: TObject);
+    procedure archiveButtonClick(Sender: TObject);
+  private
+    TInputFileName: string;
+    TInitialDir : string;
+    { Private declarations }
+  public
+    property InputFileName: string read TInputFileName write TInputFileName;
+    property InitialDir: string read TInitialDir write TInitialDir;
+    { Public declarations }
+  end;
+
+var
+  archiveFileName: string;
+implementation
+
+{$R *.dfm}
+
+procedure TArchiveForm.archiveButtonClick(Sender: TObject);
+begin
+  var progressForm := TProgressForm.Create(self);
+  try
+    progressForm.InputFileName := InputFileName;
+    progressForm.OutputFileName := archiveFileName;
+
+    if Algorithm1.Checked then progressForm.Algorithm := 0
+      else if Algorithm2.Checked then progressForm.Algorithm := 1
+        else progressForm.Algorithm := 2;
+
+    progressForm.ProcessType := 0;
+    progressForm.ShowModal;
+  finally
+    progressForm.Free;
+    self.Close();
+  end;
+end;
+
+procedure TArchiveForm.cancelButtonClick(Sender: TObject);
+begin
+  self.Close();
+end;
+
+procedure TArchiveForm.chooseFileButtonClick(Sender: TObject);
+begin
+  fileSaveDialog.Filter := 'Archive files (*.ark)|*.ark';
+  fileSaveDialog.InitialDir := InitialDir;
+  fileSaveDialog.DefaultExt := 'ark';
+
+  if fileSaveDialog.Execute then
+  begin
+    EditFileName.Text := fileSaveDialog.FileName;
+  end;
+end;
+
+procedure TArchiveForm.editFileNameChange(Sender: TObject);
+begin
+  archiveFileName := Trim(editFileName.Text);
+  archiveButton.Enabled := not archiveFileName.IsEmpty and
+   (ExtractFileExt(archiveFileName) = '.ark');
+end;
+end.
