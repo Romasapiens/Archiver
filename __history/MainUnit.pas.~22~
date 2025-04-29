@@ -24,7 +24,7 @@ type
   public
     { Public declarations }
   end;
-
+                   //
 var
   MainForm: TMainForm;
   fileName: string;
@@ -73,16 +73,24 @@ begin
 end;
 
 procedure TMainForm.unarchiveButtonClick(Sender: TObject);
+const
+  SELDIRHELP = 0;
+var
+  Directory: string;
 begin
-  var progressForm := TProgressForm.Create(self);
-  try
-    progressForm.InputFileName := archiveFileName;
-    progressForm.OutputDirectory := 'C:\';
-    progressForm.ProcessType := 1;
-    progressForm.ShowModal;
-  finally
-    progressForm.Free;
-    self.Close();
+  Directory := DirectoryListBox1.Directory;
+
+  if SelectDirectory(Directory, [sdAllowCreate, sdPerformCreate, sdPrompt], SELDIRHELP) then
+  begin
+    var progressForm := TProgressForm.Create(self);
+    try
+      progressForm.InputFileName := FileListBox1.FileName;
+      progressForm.OutputDirectory := Directory;
+      progressForm.ProcessType := 1;
+      progressForm.ShowModal;
+    finally
+      progressForm.Free;
+    end;
   end;
 end;
 

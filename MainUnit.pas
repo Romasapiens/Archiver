@@ -24,7 +24,7 @@ type
   public
     { Public declarations }
   end;
-
+                   //fhd
 var
   MainForm: TMainForm;
   fileName: string;
